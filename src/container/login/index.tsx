@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router";
 import { Action, Dispatch } from "redux";
 import { userLogin, throwError, clearError } from "../../actions";
-import logo from "../../img/Infosys-Logo.gif";
+//import logo from "../../img/Infosys-Logo.gif";
 import "./Login.css";
 
 interface Props extends RouteComponentProps {
@@ -73,7 +73,7 @@ class Login extends Component<Props, State> {
     return (
       <div className="row m-0 login-form-container">
         <div className="border-right col-6 media">
-          <img src={logo} alt="Infosys Logo" className="m-auto" />
+          {/*<img src={logo} alt="Infosys Logo" className="m-auto" />*/}
         </div>
         <div className="login-form-container col-5 p-4 m-auto d-flex flex-column justify-content-center">
           <div className="row">
