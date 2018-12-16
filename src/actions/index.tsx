@@ -1,4 +1,6 @@
-import { Action, USER_LOGIN, ERROR } from "./actionTypes";
+import { Action, USER_LOGIN, ALERT, IDEA_SELECTED } from "./actionTypes";
+import {AnyAction} from 'redux';
+import {AlertState} from '../reducers/reduxState';
 
 export function userLogin(user: any): Action {
   return {
@@ -7,16 +9,23 @@ export function userLogin(user: any): Action {
   };
 }
 
-export function throwError(error: string): Action {
+export function throwError(error: AlertState): AnyAction{
   return {
-    type: ERROR,
+    type: ALERT,
     payload: error
   };
 }
 
-export function clearError(): Action {
+export function clearError(): AnyAction{
   return {
-    type: ERROR,
-    payload: ""
+    type: ALERT,
+    payload: {message:"",type:""}
   };
+}
+
+export function selectIdea(ideaId:string): AnyAction{
+  return {
+    type: IDEA_SELECTED,
+    payload: ideaId
+  }
 }

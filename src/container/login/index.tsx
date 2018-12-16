@@ -6,6 +6,7 @@ import { Action, Dispatch } from "redux";
 import { userLogin, throwError, clearError } from "../../actions";
 //import logo from "../../img/Infosys-Logo.gif";
 import "./Login.css";
+import { AlertState } from "../../reducers/reduxState";
 
 interface Props extends RouteComponentProps {
   updateUser: Function;
@@ -63,7 +64,7 @@ class Login extends Component<Props, State> {
           }
         },
         (reason: any) => {
-          this.props.throwError("Please enter valid credentials");
+          this.props.throwError({type:"ERROR",message:"Please enter valid credentials"});
           console.error(reason);
         }
       );
@@ -132,7 +133,7 @@ function mapDispatchProps(dispatch: Dispatch<Action>) {
   return {
     updateUser: (name: string, email: string) =>
       dispatch(userLogin({ name, email })),
-    throwError: (error: string) => dispatch(throwError(error)),
+    throwError: (alert: AlertState) => dispatch(throwError(alert)),
     clearError: () => dispatch(clearError())
   };
 }

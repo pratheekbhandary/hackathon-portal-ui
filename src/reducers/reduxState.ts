@@ -5,5 +5,11 @@ export interface UserState {
 
 export interface ReduxState {
   user: UserState;
-  error: string;
+  alert: string;
+  ideaSelected: string;
+}
+
+export interface AlertState {
+  message: string;
+  type: string;
 }
