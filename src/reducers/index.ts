@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
 import { userReducer as user } from "./userLogin";
 import { ReduxState } from "./reduxState";
-import { errorReducer as error } from "./errorReducer";
+import { errorReducer as alert } from "./errorReducer";
+import {ideaSelected} from './ideaSelected';
 
-export default combineReducers<ReduxState>({
+export default combineReducers<any>({
   user,
-  error
+  alert,
+  ideaSelected
 });

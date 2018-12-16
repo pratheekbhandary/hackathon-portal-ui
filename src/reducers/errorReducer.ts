@@ -1,12 +1,14 @@
-import { Action, ERROR } from "../actions/actionTypes";
+import { ALERT } from "../actions/actionTypes";
+import {AlertState} from "./reduxState";
+import { AnyAction } from "redux";
 
-export const errorState: string = "";
+const alertState={message:"",type:""}
 
 export function errorReducer(
-  state: string = errorState,
-  action: Action
-): string {
-  if (action.type === ERROR) {
+  state: AlertState = alertState,
+  action: AnyAction
+): AlertState {
+  if (action.type === ALERT) {
     return action.payload;
   }
   return state;

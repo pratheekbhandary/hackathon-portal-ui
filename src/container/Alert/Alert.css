@@ -1,0 +1,25 @@
+.myAlert-top{
+    position: fixed;
+    top: 75px;
+    left: 2%;
+    width: 96%;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 15px;
+    border: 3px solid seagreen;
+}
+
+.myAlert-bottom{
+    position: fixed;
+    top: 75px;
+    left: 2%;
+    width: 96%;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 15px;
+    border: 3px solid indianred;
+}
+
+.alert{
+    display: none;
+}

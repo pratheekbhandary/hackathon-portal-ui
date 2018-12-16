@@ -7,7 +7,7 @@ import logger from "redux-logger";
 import reducers from './reducers';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import TeamDetails from './container/nomination/TeamDetails';
-import Alert from './component/alert';
+import Alert from './container/Alert';
 import Login from  './container/login';
 import Profile from './container/profile';
 import Guard from './container/guards';

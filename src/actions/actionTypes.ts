@@ -4,4 +4,5 @@ export interface Action {
 }
 
 export const USER_LOGIN = "USER_LOGIN";
-export const ERROR = "ERROR";
+export const ALERT = "ALERT";
+export const IDEA_SELECTED="IDEA_SELECTED";
